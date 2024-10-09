@@ -1,0 +1,3 @@
+# Data integration 
+After filtering, mitochondrial, ribosomal protein-coding and leukocyte antigen genes were removed from these 5 datasets. Batch effect were corrected by applying following integration tools: CCA and RPCA performed in the ‘IntegrateLayers’ function which is a streamlined integrative analysis from Seurat, Harmony (version 1.2.0) as well as scVI(version 1.1.2). Followed by the tutorials of each method, when applying RunHarmony, we used donor ID as integration variants and a theta of 0.6. We used all genes in scVI integration, and Seurat objects were transcribed into anndata objects using scfetch (version 0.5.0) in R with reticulate (1.37.0). The command we use were as follows:
+

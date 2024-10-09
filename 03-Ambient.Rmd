@@ -1,0 +1,34 @@
+# Ambient RNA removal 
+The cell suspension in single nucleus transcriptome sequencing often contains a low-to-moderate concentration of cell-free mRNA or other capturable features, leading to nonzero molecule counts in cell-free droplets. These 'ambient' molecules originate from sources such as ruptured or degraded cells, residual cytoplasmic debris (e.g., in snRNA-seq), or exogenous contaminants. This systematic background noise can introduce batch effects and result in spurious differential gene expression. To address this, we apply CellBender, a deep generative model that accurately distinguishes cell-containing droplets from cell-free ones. By learning the background noise profile, it provides end-to-end, noise-free quantification, enhancing the reliability of downstream analysis.
+
+
+## Usage
+In this projects, we apply CellBender (version 0.3.0) to process the 'raw_feature_bc_matrix' to remove empty droplets and counts due to ambient RNA molecules from the count matrices and estimate the true cells. Here is an example of one sample from adipose tissue.
+
+### Installation
+we installed CellBender (v0.3.0) in its own conda environment by following the protocol writtern by the developer 
+
+### Getting started
+Activate the conda environment:
+```{r}
+system('conda activate cellbender-env')
+```
+
+Run cellbender remove-backage using the command
+```{bash}
+cd ./data
+
+cellbender remove-background \
+    --input ./raw_feature_bc_matrix.h5 \
+    --output ./output/demo.h5 \
+    --cuda 
+```
+
+Perform per-cell quality control checks, and filter out dead / dying cells, as appropriate for your experiment
+
+
+
+## Tips
+
+
+

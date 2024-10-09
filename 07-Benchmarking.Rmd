@@ -1,0 +1,3 @@
+# Benchmarking analyses 
+In addition to identification of prominent marker genes in the integrated data, benchmarking included calculations of ARI coefficients, LISI scores kBET rates for integration across different donors by using benchmarking pipeline from scib-matrices (version 0.5.1) package. All the datasets were clustered well using the above method with refined resolution.The command we use were as follows:
+

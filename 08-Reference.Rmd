@@ -1,0 +1,22 @@
+# Reference
+
+Massier, L., et al., An integrated single cell and spatial transcriptomic map of human white adipose tissue. Nature Communications, 2023. 14(1): p. 1438.
+
+Fleming, S.J., et al., Unsupervised removal of systematic background noise from droplet-based single-cell experiments using CellBender. Nature Methods, 2023. 20(9): p. 1323-1335.
+
+Hao, Y., et al., Dictionary learning for integrative, multimodal and scalable single-cell analysis. Nature Biotechnology, 2024. 42(2): p. 293-304.
+
+Germain P, L.A., Garcia Meixide C, Macnair W, Robinson M Doublet identification in single-cell sequencing data using scDblFinder. f1000research, 2022.
+
+Hafemeister, C. and R. Satija, Normalization and variance stabilization of single-cell RNA-seq data using regularized negative binomial regression. Genome Biology, 2019. 20(1): p. 296.
+
+Aran, D., et al., Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage. Nature Immunology, 2019. 20(2): p. 163-172.
+
+Korsunsky, I., et al., Fast, sensitive and accurate integration of single-cell data with Harmony. Nature Methods, 2019. 16(12): p. 1289-1296.
+
+Luecken, M.D., et al., Benchmarking atlas-level data integration in single-cell genomics. Nature Methods, 2022. 19(1): p. 41-50.
+
+Yabing Song, J.G., Jianbin Wang, scfetch: an R package to access and format single-cell RNA sequencing datasets from public repositories. bioRxiv, 2023.
+
+Heumos, L., et al., Best practices for single-cell analysis across modalities. Nature Reviews Genetics, 2023. 24(8): p. 550-572.
+

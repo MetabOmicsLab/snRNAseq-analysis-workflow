@@ -1,0 +1,3 @@
+# Quality control and doublet removal
+These individual samples from publicly available datasets were re-analyzed with Seurat (version 5.1.0) in R v4.3.1. Individual objects were created considering genes expressed in more than 3 cells, and cells with more than 200 genes expressed. Low-quality barcodes (nucleus) had less than 200 features or than 500 UMIs were excluded. Additionally, Mitochondrial content thresholds for exclusion were set at 5% (hypothalamus, adipose tissue and liver) and 10% (skeletal muscle). All samples were assessed for potential doublets using scDblFinder (version 1.16.0), and nucleus called as doublets were removed before further analyses.The command we use were as follows:
+

@@ -1,36 +1,17 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues"
+author: "Pengwei Dong"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
-documentclass: book
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
-link-citations: yes
-github-repo: rstudio/bookdown-demo
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
 
-# Prerequisites
+# Introduction
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+This is a benchmarked and optimized workflow for analyzing single-nuclei RNA sequencing (snRNA-seq), tailored to the analysis of metabolically active tissues. This workflow includes key steps from preprocessing to downstream analyses. This technical note aims to serve as a standard protocol for researchers seeking to apply snRNA-seq to metabolic tissues including adipose tissue, muscle, hypothalamus and liver to uncover novel regulatory mechanisms, identify new therapeutic targets, and ultimately contribute to the development of more effective treatments for metabolic disorders.
+   
+This workflow encompasses a series of procedures, including the alignment and quantification of raw fastq files, followed by the recommended removal of ambient RNA after generating the raw matrix. Additionally, it involves the potential identification and removal of doublets using scDblFinder, normalization of gene expression values, multiple approaches for data integration, and comprehensive benchmarking steps to ensure robust results.
 
-The **bookdown** package can be installed from CRAN or Github:
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
-
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
-
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
-
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
+```{r, echo=FALSE}
+knitr::include_graphics("image/workflow.jpg")
 ```

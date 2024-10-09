@@ -1,0 +1,3 @@
+# Genome alignment and quanyification
+Raw single nucleus transcriptomics sequencing reads in fastq format were downloaded and processed with Cellranger (version 7.1.0, 10x Genomics) with enabled intron mode for each sample, the reads were aligned to the human GRCh38 genome-2020-A and mouse samples to mm10-3.0.0 genome to generate unique molecular identifiers (UMI) the expression matrices.The command we use were as follows:
+
