@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Data integration | An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues</title>
-  <meta name="description" content="6 Data integration | An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues" />
+  <title>2 Genome alignment and quantification | An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues</title>
+  <meta name="description" content="2 Genome alignment and quantification | An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Data integration | An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues" />
+  <meta property="og:title" content="2 Genome alignment and quantification | An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Data integration | An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues" />
+  <meta name="twitter:title" content="2 Genome alignment and quantification | An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="normalization-clustering-and-annotation.html"/>
-<link rel="next" href="benchmarking-analyses.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="ambient-rna-removal.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -120,18 +120,54 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-integration" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">6</span> Data integration<a href="data-integration.html#data-integration" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>After filtering, mitochondrial, ribosomal protein-coding and leukocyte antigen genes were removed from these 5 datasets. Batch effect were corrected by applying following integration tools: CCA and RPCA performed in the ‘IntegrateLayers’ function which is a streamlined integrative analysis from Seurat, Harmony (version 1.2.0) as well as scVI(version 1.1.2). Followed by the tutorials of each method, when applying RunHarmony, we used donor ID as integration variants and a theta of 0.6. We used all genes in scVI integration, and Seurat objects were transcribed into anndata objects using scfetch (version 0.5.0) in R with reticulate (1.37.0). The command we use were as follows:</p>
+<div id="genome-alignment-and-quantification" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Genome alignment and quantification<a href="genome-alignment-and-quantification.html#genome-alignment-and-quantification" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Raw single nucleus transcriptomics sequencing reads in fastq format were downloaded and processed with Cellranger (version 7.1.0, 10x Genomics) with enabled intron mode for each sample, the reads were aligned to the human GRCh38 genome-2020-A and mouse samples to mm10-2020-A genome to generate unique molecular identifiers (UMI) the expression matrices.</p>
+<p>The cellranger count pipeline aligns sequencing reads in FASTQ files to a reference transcriptome and generates gene expresstion matrices. Below is an example from two samples, one is from human adipose tissue datasets, and the other is from mouse muscle datasets. The command we use were as follows:</p>
+<div id="installation-and-reference-downloading" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Installation and reference downloading<a href="genome-alignment-and-quantification.html#installation-and-reference-downloading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We installed Cellranger (v7.1.0) in a dedicated conda environment by following the installation protocol provided by the developers, and the necessary reference files were also downloaded. For detailed instructions, please refer to the official documentation: <a href="https://www.10xgenomics.com/cn/support/software/cell-ranger/downloads" class="uri">https://www.10xgenomics.com/cn/support/software/cell-ranger/downloads</a>.</p>
+</div>
+<div id="usage" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Usage<a href="genome-alignment-and-quantification.html#usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="getting-started" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Getting started<a href="genome-alignment-and-quantification.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First, activate the own conda enviroment of Cell Ranger:</p>
+<pre class="shell"><code>(base) $ conda activate cellranger_7</code></pre>
+</div>
+<div id="cellranger-count" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Cellranger count<a href="genome-alignment-and-quantification.html#cellranger-count" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For human samples:</p>
+<pre class="shell"><code>(cellranger_7) $ cellranger count --id=demo \
+--transcriptome=~/cellranger_ref/refdata-gex-GRCh38-2020-A \ 
+--fastqs=../data/demo \
+--localcores=8 --localmem=64</code></pre>
+<p>Foe mouse samples:</p>
+<pre class="shell"><code>(cellranger_7) $ cellranger count --id=demo \
+--transcriptome=~/cellranger_ref/refdata-gex-mm10-2020-A\ 
+--fastqs=../data/demo \
+--localcores=8 --localmem=64</code></pre>
+<p>(The name demo can be replaced with a object name of choice.)</p>
+<div id="recommended-arguments" class="section level4 hasAnchor" number="2.2.2.1">
+<h4><span class="header-section-number">2.2.2.1</span> Recommended arguments<a href="genome-alignment-and-quantification.html#recommended-arguments" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The –fastqs argument should specify the path to the directory containing the FASTQ files. If you used cellranger mkfastq to demultiplex your data, you can provide the path to the fastq_path directory located in the pipeline’s outs folder.The –sample argument corresponds to the sample ID at the beginning of each FASTQ file name. While it is not necessary for this tutorial, as all FASTQ files come from the same sample, it is included here as an example. Lastly, you need to provide the path to the –transcriptome reference package. Be sure to update the file paths in the following command as needed.</p>
+</div>
+</div>
+</div>
+<div id="more" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> More<a href="genome-alignment-and-quantification.html#more" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you want to get more information, please refer to the official website:
+<a href="https://www.10xgenomics.com/cn/support/software/cell-ranger/latest/tutorials/cr-tutorial-ct" class="uri">https://www.10xgenomics.com/cn/support/software/cell-ranger/latest/tutorials/cr-tutorial-ct</a></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="normalization-clustering-and-annotation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="benchmarking-analyses.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ambient-rna-removal.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -162,7 +198,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/00dong/snRNAseq-analysis-workflow/edit/main/06-Integration.Rmd",
+"link": "https://github.com/00dong/snRNAseq-analysis-workflow/edit/main/02-Alignment.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -170,7 +206,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/00dong/snRNAseq-analysis-workflow/blob/main/06-Integration.Rmd",
+"link": "https://github.com/00dong/snRNAseq-analysis-workflow/blob/main/02-Alignment.Rmd",
 "text": null
 },
 "download": null,

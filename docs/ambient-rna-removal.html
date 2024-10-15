@@ -23,14 +23,14 @@
 <meta name="author" content="Pengwei Dong" />
 
 
-<meta name="date" content="2024-10-09" />
+<meta name="date" content="2024-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="genome-alignment-and-quanyification.html"/>
+<link rel="prev" href="genome-alignment-and-quantification.html"/>
 <link rel="next" href="quality-control-and-doublet-removal.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -54,70 +54,6 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -141,15 +77,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="genome-alignment-and-quanyification.html"><a href="genome-alignment-and-quanyification.html"><i class="fa fa-check"></i><b>2</b> Genome alignment and quanyification</a></li>
+<li class="chapter" data-level="2" data-path="genome-alignment-and-quantification.html"><a href="genome-alignment-and-quantification.html"><i class="fa fa-check"></i><b>2</b> Genome alignment and quantification</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="genome-alignment-and-quantification.html"><a href="genome-alignment-and-quantification.html#installation-and-reference-downloading"><i class="fa fa-check"></i><b>2.1</b> Installation and reference downloading</a></li>
+<li class="chapter" data-level="2.2" data-path="genome-alignment-and-quantification.html"><a href="genome-alignment-and-quantification.html#usage"><i class="fa fa-check"></i><b>2.2</b> Usage</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="genome-alignment-and-quantification.html"><a href="genome-alignment-and-quantification.html#getting-started"><i class="fa fa-check"></i><b>2.2.1</b> Getting started</a></li>
+<li class="chapter" data-level="2.2.2" data-path="genome-alignment-and-quantification.html"><a href="genome-alignment-and-quantification.html#cellranger-count"><i class="fa fa-check"></i><b>2.2.2</b> Cellranger count</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="genome-alignment-and-quantification.html"><a href="genome-alignment-and-quantification.html#more"><i class="fa fa-check"></i><b>2.3</b> More</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="ambient-rna-removal.html"><a href="ambient-rna-removal.html"><i class="fa fa-check"></i><b>3</b> Ambient RNA removal</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="ambient-rna-removal.html"><a href="ambient-rna-removal.html#usage"><i class="fa fa-check"></i><b>3.1</b> Usage</a>
+<li class="chapter" data-level="3.1" data-path="ambient-rna-removal.html"><a href="ambient-rna-removal.html#usage-1"><i class="fa fa-check"></i><b>3.1</b> Usage</a>
 <ul>
 <li class="chapter" data-level="3.1.1" data-path="ambient-rna-removal.html"><a href="ambient-rna-removal.html#installation"><i class="fa fa-check"></i><b>3.1.1</b> Installation</a></li>
-<li class="chapter" data-level="3.1.2" data-path="ambient-rna-removal.html"><a href="ambient-rna-removal.html#getting-started"><i class="fa fa-check"></i><b>3.1.2</b> Getting started</a></li>
+<li class="chapter" data-level="3.1.2" data-path="ambient-rna-removal.html"><a href="ambient-rna-removal.html#getting-started-1"><i class="fa fa-check"></i><b>3.1.2</b> Getting started</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="ambient-rna-removal.html"><a href="ambient-rna-removal.html#tips"><i class="fa fa-check"></i><b>3.2</b> Tips</a></li>
+<li class="chapter" data-level="3.2" data-path="ambient-rna-removal.html"><a href="ambient-rna-removal.html#caveats-and-hints"><i class="fa fa-check"></i><b>3.2</b> Caveats and hints</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="quality-control-and-doublet-removal.html"><a href="quality-control-and-doublet-removal.html"><i class="fa fa-check"></i><b>4</b> Quality control and doublet removal</a></li>
 <li class="chapter" data-level="5" data-path="normalization-clustering-and-annotation.html"><a href="normalization-clustering-and-annotation.html"><i class="fa fa-check"></i><b>5</b> Normalization, clustering and annotation</a></li>
@@ -178,32 +123,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="ambient-rna-removal" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> Ambient RNA removal<a href="ambient-rna-removal.html#ambient-rna-removal" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The cell suspension in single nucleus transcriptome sequencing often contains a low-to-moderate concentration of cell-free mRNA or other capturable features, leading to nonzero molecule counts in cell-free droplets. These ‘ambient’ molecules originate from sources such as ruptured or degraded cells, residual cytoplasmic debris (e.g., in snRNA-seq), or exogenous contaminants. This systematic background noise can introduce batch effects and result in spurious differential gene expression. To address this, we apply CellBender, a deep generative model that accurately distinguishes cell-containing droplets from cell-free ones. By learning the background noise profile, it provides end-to-end, noise-free quantification, enhancing the reliability of downstream analysis.</p>
-<div id="usage" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Usage<a href="ambient-rna-removal.html#usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this projects, we apply CellBender (version 0.3.0) to process the ‘raw_feature_bc_matrix’ to remove empty droplets and counts due to ambient RNA molecules from the count matrices and estimate the true cells. Here is an example of one sample from adipose tissue.</p>
+<p>The primary module in the current version of CellBender is remove-background. This module effectively eliminates counts attributed to ambient RNA molecules and random barcode swapping from raw UMI-based scRNA-seq gene-by-cell count matrices. It is recommended to run remove-background as a pre-processing step before any downstream analysis using tools such as Seurat, scanpy, or custom analysis pipelines. The module supports several file formats for count matrices, including:</p>
+<ol style="list-style-type: decimal">
+<li><p>Raw .h5 files generated by the cellranger count pipeline</p></li>
+<li><p>The raw_feature_bc_matrix folder produced by cellranger count pipline</p></li>
+</ol>
+<div id="usage-1" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Usage<a href="ambient-rna-removal.html#usage-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this project, we utilize CellBender (version 0.3.0) to process the raw_feature_bc_matrix, removing empty droplets and ambient RNA molecule counts from the count matrices, and estimating the true cells present. Below is an example from one sample from adipose tissue datasets.</p>
 <div id="installation" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Installation<a href="ambient-rna-removal.html#installation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>we installed CellBender (v0.3.0) in its own conda environment by following the protocol writtern by the developer</p>
+<p>We installed CellBender (v0.3.0) in a dedicated conda environment by following the installation protocol provided by the developers. You can find the detailed instructions on the documentation: <a href="https://cellbender.readthedocs.io/en/v0.3.0/installation/index.html" class="uri">https://cellbender.readthedocs.io/en/v0.3.0/installation/index.html</a>.</p>
 </div>
-<div id="getting-started" class="section level3 hasAnchor" number="3.1.2">
-<h3><span class="header-section-number">3.1.2</span> Getting started<a href="ambient-rna-removal.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Activate the conda environment:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="ambient-rna-removal.html#cb1-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&#39;conda activate cellbender-env&#39;</span>)</span></code></pre></div>
-<p>Run cellbender remove-backage using the command</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="ambient-rna-removal.html#cb2-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&#39;cd ./data&#39;</span>)</span>
-<span id="cb2-2"><a href="ambient-rna-removal.html#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="ambient-rna-removal.html#cb2-3" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&#39;cellbender remove-background \</span></span>
-<span id="cb2-4"><a href="ambient-rna-removal.html#cb2-4" tabindex="-1"></a><span class="st">    --input ./raw_feature_bc_matrix.h5 \</span></span>
-<span id="cb2-5"><a href="ambient-rna-removal.html#cb2-5" tabindex="-1"></a><span class="st">    --output ./output/demo.h5 \</span></span>
-<span id="cb2-6"><a href="ambient-rna-removal.html#cb2-6" tabindex="-1"></a><span class="st">    --cuda &#39;</span>)</span></code></pre></div>
-<pre><code>## Warning in system(&quot;cellbender remove-background \n --input ./raw_feature_bc_matrix.h5 \n --output ./output/demo.h5 \n
-## --cuda &quot;): error in running command</code></pre>
-<p>Perform per-cell quality control checks, and filter out dead / dying cells, as appropriate for your experiment</p>
+<div id="getting-started-1" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Getting started<a href="ambient-rna-removal.html#getting-started-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First, activate the own conda enviroment of CellBender:</p>
+<pre class="shell"><code>(base) $ conda activate cellbender-env</code></pre>
+<p>Then, run cellbender remove-backage using the command(leave out the flag –cuda if you are not using a GPU):</p>
+<pre class="shell"><code>(cellbender-env) $ cellbender remove-background \
+    --input ./raw_feature_bc_matrix.h5 \
+    --output ./output/demo.h5 \
+    --cuda </code></pre>
+<p>(The output filename “demo.h5” can be replaced with a filename of choice.)</p>
+<p>The output of remove-background is a new .h5 count matrix with ambient RNA removed. This matrix can be directly used in downstream analyses with tools like Seurat or scanpy, just as if it were the original raw dataset. You can then proceed with per-cell quality control checks and filter out dead or dying cells, as appropriate for your experiment.</p>
 </div>
 </div>
-<div id="tips" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Tips<a href="ambient-rna-removal.html#tips" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="caveats-and-hints" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Caveats and hints<a href="ambient-rna-removal.html#caveats-and-hints" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="main-output-files" class="section level4 hasAnchor" number="3.2.0.1">
+<h4><span class="header-section-number">3.2.0.1</span> Main output files<a href="ambient-rna-removal.html#main-output-files" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>output_report.html: An HTML report that includes plots, commentary, and any warnings or suggestions for improving parameter settings.</p>
+<p>output.h5: A full count matrix in .h5 format with background RNA removed, retaining all the original droplet barcodes.</p>
+<p>output.pdf: A PDF file providing a graphical summary of the inference procedure.</p>
+</div>
+<div id="recommended-best-practices" class="section level4 hasAnchor" number="3.2.0.2">
+<h4><span class="header-section-number">3.2.0.2</span> Recommended best practices<a href="ambient-rna-removal.html#recommended-best-practices" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>As of v0.3.0, users will typically not need to set values for –expected-cells or –total-droplets-included, as CellBender will choose reasonable values based on your dataset. If something goes wrong with these defaults, then you can try to input these arguments manually.</p>
+<p>Considerations for setting parameters(from the official documentation):</p>
+<p>–epochs: 150 is typically a good choice. Look for a reasonably-converged ELBO value in the output PDF learning curve (meaning it looks like it has reached some saturating value). Though it may be tempting to train for more epochs, it is not advisable to over-train, since this increases the likelihood of over-fitting. (We regularize to prevent over-fitting, but training for more than 300 epochs is too much.)</p>
+<p>–expected-cells: Base this on either the number of cells expected a priori from the experimental design, or if this is not known, base this number on the UMI curve as shown below, where the appropriate number would be 5000. Pick a number where you are reasonably sure that all droplets to the left on the UMI curve are real cells.</p>
+<p>–total-droplets-included: Choose a number that goes a few thousand barcodes into the “empty droplet plateau”. Include some droplets that you think are surely empty. But be aware that the larger this number, the longer the algorithm takes to run (linear). See the UMI curve below, where an appropriate choice would be 15,000. Every droplet to the right of this number on the UMI curve should be surely-empty. (This kind of UMI curve can be seen in the web_summary.html output from cellranger count.)</p>
+<p>–cuda: Include this flag. The code is meant to be run on a GPU.</p>
+<p>–learning-rate: The default value of 1e-4 is typically fine, but this value can be adjusted if problems arise during quality-control checks of the learning curve (as above).</p>
+<p>–fpr: A value of 0.01 is the default, and represents a fairly conservative setting, which is appropriate for most analyses. In order to examine a single dataset at a time and remove more noise (at the expense of some signal), choose larger values such as 0.05 or 0.1. Bear in mind that the value 1 represents removal of (nearly) every count in the dataset, signal and noise. You can generate multiple output count matrices in the same run by choosing several values: 0.0 0.01 0.05 0.1</p>
+</div>
+<div id="more-1" class="section level4 hasAnchor" number="3.2.0.3">
+<h4><span class="header-section-number">3.2.0.3</span> More<a href="ambient-rna-removal.html#more-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>If you want to get more information, please refer to the documentation and GitHub:
+<a href="https://cellbender.readthedocs.io/en/v0.3.0/index.html" class="uri">https://cellbender.readthedocs.io/en/v0.3.0/index.html</a>
+<a href="https://github.com/broadinstitute/CellBender/tree/v0.3.0" class="uri">https://github.com/broadinstitute/CellBender/tree/v0.3.0</a></p>
 
+</div>
 </div>
 </div>
             </section>
@@ -211,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="genome-alignment-and-quanyification.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="genome-alignment-and-quantification.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="quality-control-and-doublet-removal.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
