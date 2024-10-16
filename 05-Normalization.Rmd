@@ -35,19 +35,19 @@ genes_to_check <- c ("CD3D", "CD3E", "PTPRC", "CD4",
                      "CD2", "CD40LG", "IL7R", #Naive CD4 T
                      "KLRF1", "PRF1", "GZMB", "KLRD1",#Cytotoxic CD8 T
                      "CD8A", "GZMH", "NKG7", #Naive CD8 T
-                     "CLTA4", "TIGIT", "FOXP3", #Treg
+                     "TIGIT", "FOXP3", #Treg
                      "CCR6", "KLRB1", "CEBPD", #MAIT
                      "LEF1", "KLRC2", "ZNF683", #CD8 gd T
                      "GZMK", "CCL5", "XCL2", "CCL4", #NK-like
-                     "CX3CR1", "FCG3RA", "GNLY", "SPON2", #mNK
-                     "KIT", "CD200R1", "TPBC2",  #ILCs
-                     "FPR2", "SMIM25", #ncMo
+                     "CX3CR1", "GNLY", "SPON2", #mNK
+                     "KIT", "CD200R1",  #ILCs
+                     "SMIM25", #ncMo
                      "S100A9", "MMP19", #Monocyte
                      "S100A8", "EREG", "IL1B", #myeloid-like
                      "XCR1", "CLEC9A", "CADM1", #cDC1
                      "CLEC10A", "CD1C", "FCER1A", #cDC2B
-                     "IGKC", "CD79A", "IEBF1", #B cell
-                     "C1QA", "RNASE1", "LYE1", # PVMs
+                     "IGKC", "CD79A", #B cell
+                     "C1QA", "RNASE1", # PVMs
                      "MRC1", "C1QB", "CD86", #Macrophage
                      "DKK1", "PI16", "PRG4", "DPP4","PDGFRA", #APC
                      "RGS5","MYH11", #SMC & Pericyte

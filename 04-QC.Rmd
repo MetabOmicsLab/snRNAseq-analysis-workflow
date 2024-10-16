@@ -89,7 +89,6 @@ cohort_1 <- subset(cohort_1, subset = nFeature_RNA > 200 &  nFeature_RNA < 15000
                      nCount_RNA > 500 & nCount_RNA < 200000 & 
                      percent.mt < 5)
 cohort_1 <- subset(cohort_1, subset = doublet_type == 'singlet')
-cohort_1
 ```
 
 

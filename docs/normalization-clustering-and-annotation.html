@@ -188,19 +188,19 @@ DimPlot(cohort_1, label = T, repel = T) </code></pre>
                      &quot;CD2&quot;, &quot;CD40LG&quot;, &quot;IL7R&quot;, #Naive CD4 T
                      &quot;KLRF1&quot;, &quot;PRF1&quot;, &quot;GZMB&quot;, &quot;KLRD1&quot;,#Cytotoxic CD8 T
                      &quot;CD8A&quot;, &quot;GZMH&quot;, &quot;NKG7&quot;, #Naive CD8 T
-                     &quot;CLTA4&quot;, &quot;TIGIT&quot;, &quot;FOXP3&quot;, #Treg
+                     &quot;TIGIT&quot;, &quot;FOXP3&quot;, #Treg
                      &quot;CCR6&quot;, &quot;KLRB1&quot;, &quot;CEBPD&quot;, #MAIT
                      &quot;LEF1&quot;, &quot;KLRC2&quot;, &quot;ZNF683&quot;, #CD8 gd T
                      &quot;GZMK&quot;, &quot;CCL5&quot;, &quot;XCL2&quot;, &quot;CCL4&quot;, #NK-like
-                     &quot;CX3CR1&quot;, &quot;FCG3RA&quot;, &quot;GNLY&quot;, &quot;SPON2&quot;, #mNK
-                     &quot;KIT&quot;, &quot;CD200R1&quot;, &quot;TPBC2&quot;,  #ILCs
-                     &quot;FPR2&quot;, &quot;SMIM25&quot;, #ncMo
+                     &quot;CX3CR1&quot;, &quot;GNLY&quot;, &quot;SPON2&quot;, #mNK
+                     &quot;KIT&quot;, &quot;CD200R1&quot;,  #ILCs
+                     &quot;SMIM25&quot;, #ncMo
                      &quot;S100A9&quot;, &quot;MMP19&quot;, #Monocyte
                      &quot;S100A8&quot;, &quot;EREG&quot;, &quot;IL1B&quot;, #myeloid-like
                      &quot;XCR1&quot;, &quot;CLEC9A&quot;, &quot;CADM1&quot;, #cDC1
                      &quot;CLEC10A&quot;, &quot;CD1C&quot;, &quot;FCER1A&quot;, #cDC2B
-                     &quot;IGKC&quot;, &quot;CD79A&quot;, &quot;IEBF1&quot;, #B cell
-                     &quot;C1QA&quot;, &quot;RNASE1&quot;, &quot;LYE1&quot;, # PVMs
+                     &quot;IGKC&quot;, &quot;CD79A&quot;, #B cell
+                     &quot;C1QA&quot;, &quot;RNASE1&quot;, # PVMs
                      &quot;MRC1&quot;, &quot;C1QB&quot;, &quot;CD86&quot;, #Macrophage
                      &quot;DKK1&quot;, &quot;PI16&quot;, &quot;PRG4&quot;, &quot;DPP4&quot;,&quot;PDGFRA&quot;, #APC
                      &quot;RGS5&quot;,&quot;MYH11&quot;, #SMC &amp; Pericyte
@@ -210,7 +210,7 @@ DimPlot(cohort_1, label = T, repel = T) </code></pre>
 DotPlot(cohort_1, features = genes_to_check,  
         cols = c(&quot;gray95&quot;, &quot;red&quot;), cluster.idents = T, col.min = 0, 
         assay=&#39;SCT&#39;) + coord_flip()</code></pre>
-<p><img src="image/dotplot.png" width="617" /></p>
+<p><img src="image/dotplot.png" width="744" /></p>
 <pre class="shell"><code>cohort_1@meta.data$major_celltype[cohort_1@meta.data$seurat_clusters %in% c(0,10,12)] &lt;- &#39;Adipocyte&#39;
 cohort_1@meta.data$major_celltype[cohort_1@meta.data$seurat_clusters %in% c(8,9)] &lt;- &#39;SMC&#39;
 cohort_1@meta.data$major_celltype[cohort_1@meta.data$seurat_clusters %in% 1] &lt;- &#39;Macrophage&#39;
