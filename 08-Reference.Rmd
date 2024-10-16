@@ -2,6 +2,8 @@
 
 Massier, L., et al., An integrated single cell and spatial transcriptomic map of human white adipose tissue. Nature Communications, 2023. 14(1): p. 1438.
 
+Zheng, G. X. Y. et al. (2017). Massively parallel digital transcriptional profiling of single cells. Nature Communications 8: 1-12, doi:10.1038/ncomms14049
+
 Fleming, S.J., et al., Unsupervised removal of systematic background noise from droplet-based single-cell experiments using CellBender. Nature Methods, 2023. 20(9): p. 1323-1335.
 
 Hao, Y., et al., Dictionary learning for integrative, multimodal and scalable single-cell analysis. Nature Biotechnology, 2024. 42(2): p. 293-304.

@@ -1,12 +1,10 @@
 # Genome alignment and quantification
+Raw single nucleus transcriptomics sequencing reads in fastq format were downloaded and processed with Cell Ranger (version 7.1.0, 10x Genomics) with enabled intron mode for each sample, the reads were aligned to the human GRCh38 genome-2020-A and mouse samples to mm10-2020-A genome to generate unique molecular identifiers (UMIs) the expression matrices.
 
-Raw single nucleus transcriptomics sequencing reads in fastq format were downloaded and processed with Cellranger (version 7.1.0, 10x Genomics) with enabled intron mode for each sample, the reads were aligned to the human GRCh38 genome-2020-A and mouse samples to mm10-2020-A genome to generate unique molecular identifiers (UMI) the expression matrices.
-
-The cellranger count pipeline aligns sequencing reads in FASTQ files to a reference transcriptome and generates gene expresstion matrices. Below is an example from two samples, one is from human adipose tissue datasets, and the other is from mouse muscle datasets. The command we use were as follows:
+The cellranger count pipeline aligns sequencing reads in FASTQ files to a reference transcriptome and generates gene expresstion matrices. Below is an example from two samples, one is from human adipose tissue datasets, and the other is from mouse muscle datasets.
 
 ## Installation and reference downloading
-We installed Cellranger (v7.1.0) in a dedicated conda environment by following the installation protocol provided by the developers, and the necessary reference files were also downloaded. For detailed instructions, please refer to the official documentation: https://www.10xgenomics.com/cn/support/software/cell-ranger/downloads.
-
+We installed Cellranger (v7.1.0) in a dedicated conda environment by following the installation protocol provided by the developers, and the necessary reference files were also downloaded. Ensure that you have download the appropriate reference genome or transcriptome for your analysis. For detailed instructions, please refer to the official documentation: https://www.10xgenomics.com/cn/support/software/cell-ranger/downloads.
 
 ## Usage
 ### Getting started
@@ -15,27 +13,31 @@ First, activate the own conda enviroment of Cell Ranger:
 (base) $ conda activate cellranger_7
 ```
 
-### Cellranger count
+### Run cellranger count
 For human samples:
 ```{shell}
 (cellranger_7) $ cellranger count --id=demo \
 --transcriptome=~/cellranger_ref/refdata-gex-GRCh38-2020-A \ 
 --fastqs=../data/demo \
---localcores=8 --localmem=64
+--localcores=8 \
+--localmem=64
 ```
 
-Foe mouse samples:
+For mouse samples:
 ```{shell}
 (cellranger_7) $ cellranger count --id=demo \
 --transcriptome=~/cellranger_ref/refdata-gex-mm10-2020-A\ 
 --fastqs=../data/demo \
---localcores=8 --localmem=64
+--localcores=8 \
+--localmem=64
 ```
 (The name demo can be replaced with a object name of choice.)
 
-#### Recommended arguments
-The --fastqs argument should specify the path to the directory containing the FASTQ files. If you used cellranger mkfastq to demultiplex your data, you can provide the path to the fastq_path directory located in the pipeline’s outs folder.The --sample argument corresponds to the sample ID at the beginning of each FASTQ file name. While it is not necessary for this tutorial, as all FASTQ files come from the same sample, it is included here as an example. Lastly, you need to provide the path to the --transcriptome reference package. Be sure to update the file paths in the following command as needed.
+### Recommendation for setting arguments
+The --fastqs argument should specify the path to the directory containing the FASTQ files. If you used cellranger mkfastq to demultiplex your data, you can provide the path to the fastq_path directory located in the pipeline’s outs folder.
 
-## More 
+While it is not necessary for this tutorial, as all FASTQ files come from the same sample, it is included here as an example. Lastly, you need to provide the path to the --transcriptome reference package. Be sure to update the file paths in the following command as needed.
+
+## More information
 If you want to get more information, please refer to the official website:
 https://www.10xgenomics.com/cn/support/software/cell-ranger/latest/tutorials/cr-tutorial-ct
