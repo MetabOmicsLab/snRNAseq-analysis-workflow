@@ -10,13 +10,13 @@ We installed Cellranger (v7.1.0) in a dedicated conda environment by following t
 ### Getting started
 First, activate the own conda enviroment of Cell Ranger:
 ```{shell}
-(base) $ conda activate cellranger_7
+(base)$ conda activate cellranger_7
 ```
 
 ### Run cellranger count
 For human samples:
 ```{shell}
-(cellranger_7) $ cellranger count --id=demo \
+(cellranger_7)$ cellranger count --id=demo \
 --transcriptome=~/cellranger_ref/refdata-gex-GRCh38-2020-A \ 
 --fastqs=../data/demo \
 --localcores=8 \
@@ -25,7 +25,7 @@ For human samples:
 
 For mouse samples:
 ```{shell}
-(cellranger_7) $ cellranger count --id=demo \
+(cellranger_7)$ cellranger count --id=demo \
 --transcriptome=~/cellranger_ref/refdata-gex-mm10-2020-A\ 
 --fastqs=../data/demo \
 --localcores=8 \

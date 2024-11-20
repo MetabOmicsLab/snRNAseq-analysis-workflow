@@ -18,13 +18,13 @@ We installed CellBender (v0.3.0) in a dedicated conda environment by following t
 ### Getting started
 First, activate the own conda enviroment of CellBender:
 ```{shell}
-(base) $ conda activate cellbender-env
+(base)$ conda activate cellbender-env
 ```
 
 
 Then, run cellbender remove-backage using the command(leave out the flag --cuda if you are not using a GPU):
 ```{shell}
-(cellbender-env) $ cellbender remove-background \
+(cellbender-env)$ cellbender remove-background \
     --input ./raw_feature_bc_matrix.h5 \
     --output ./output/demo.h5 \
     --cuda 
@@ -57,7 +57,7 @@ Considerations for setting parameters(from the official documentation):
 
 --learning-rate: The default value of 1e-4 is typically fine, but this value can be adjusted if problems arise during quality-control checks of the learning curve (as above).
 
---fpr: A value of 0.01 is the default, and represents a fairly conservative setting, which is appropriate for most analyses. In order to examine a single dataset at a time and remove more noise (at the expense of some signal), choose larger values such as 0.05 or 0.1. Bear in mind that the value 1 represents removal of (nearly) every count in the dataset, signal and noise. You can generate multiple output count matrices in the same run by choosing several values: 0.0 0.01 0.05 0.1
+--fpr: A value of 0.01 is the default, and represents a fairly conservative setting, which is appropriate for most analyses. In order to examine a single dataset at a time and remove more noise (at the expense of some signal), choose larger values such as 0.05 or 0.1. Bear in mind that the value 1 represents removal of (nearly) every count in the dataset, signal and noise. You can generate multiple output count matrices in the same run by choosing several values: 0.0 0.01 0.05 0.1.
 
 ## More information
 If you want to get more information, please refer to the documentation and GitHub:

@@ -23,7 +23,7 @@
 <meta name="author" content="Pengwei Dong" />
 
 
-<meta name="date" content="2024-10-16" />
+<meta name="date" content="2024-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -175,18 +175,18 @@
 <div id="getting-started" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Getting started<a href="genome-alignment-and-quantification.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>First, activate the own conda enviroment of Cell Ranger:</p>
-<pre class="shell"><code>(base) $ conda activate cellranger_7</code></pre>
+<pre class="shell"><code>(base)$ conda activate cellranger_7</code></pre>
 </div>
 <div id="run-cellranger-count" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Run cellranger count<a href="genome-alignment-and-quantification.html#run-cellranger-count" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For human samples:</p>
-<pre class="shell"><code>(cellranger_7) $ cellranger count --id=demo \
+<pre class="shell"><code>(cellranger_7)$ cellranger count --id=demo \
 --transcriptome=~/cellranger_ref/refdata-gex-GRCh38-2020-A \ 
 --fastqs=../data/demo \
 --localcores=8 \
 --localmem=64</code></pre>
 <p>For mouse samples:</p>
-<pre class="shell"><code>(cellranger_7) $ cellranger count --id=demo \
+<pre class="shell"><code>(cellranger_7)$ cellranger count --id=demo \
 --transcriptome=~/cellranger_ref/refdata-gex-mm10-2020-A\ 
 --fastqs=../data/demo \
 --localcores=8 \

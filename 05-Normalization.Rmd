@@ -12,6 +12,7 @@ cohort_1 <- SCTransform(cohort_1, vars.to.regress = "percent.mt", verbose = FALS
    RunPCA(npcs = 75, verbose = FALSE)
 ElbowPlot(cohort_1, ndims = 50)
 ```
+
 ```{r, echo=FALSE}
 knitr::include_graphics("image/elbow.png")
 ```

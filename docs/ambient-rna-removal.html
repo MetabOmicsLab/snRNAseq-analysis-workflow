@@ -23,7 +23,7 @@
 <meta name="author" content="Pengwei Dong" />
 
 
-<meta name="date" content="2024-10-16" />
+<meta name="date" content="2024-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,9 +180,9 @@
 <div id="getting-started-1" class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Getting started<a href="ambient-rna-removal.html#getting-started-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>First, activate the own conda enviroment of CellBender:</p>
-<pre class="shell"><code>(base) $ conda activate cellbender-env</code></pre>
+<pre class="shell"><code>(base)$ conda activate cellbender-env</code></pre>
 <p>Then, run cellbender remove-backage using the command(leave out the flag –cuda if you are not using a GPU):</p>
-<pre class="shell"><code>(cellbender-env) $ cellbender remove-background \
+<pre class="shell"><code>(cellbender-env)$ cellbender remove-background \
     --input ./raw_feature_bc_matrix.h5 \
     --output ./output/demo.h5 \
     --cuda </code></pre>
@@ -207,7 +207,7 @@
 <p>–total-droplets-included: Choose a number that goes a few thousand barcodes into the “empty droplet plateau”. Include some droplets that you think are surely empty. But be aware that the larger this number, the longer the algorithm takes to run (linear). See the UMI curve below, where an appropriate choice would be 15,000. Every droplet to the right of this number on the UMI curve should be surely-empty. (This kind of UMI curve can be seen in the web_summary.html output from cellranger count.)</p>
 <p>–cuda: Include this flag. The code is meant to be run on a GPU.</p>
 <p>–learning-rate: The default value of 1e-4 is typically fine, but this value can be adjusted if problems arise during quality-control checks of the learning curve (as above).</p>
-<p>–fpr: A value of 0.01 is the default, and represents a fairly conservative setting, which is appropriate for most analyses. In order to examine a single dataset at a time and remove more noise (at the expense of some signal), choose larger values such as 0.05 or 0.1. Bear in mind that the value 1 represents removal of (nearly) every count in the dataset, signal and noise. You can generate multiple output count matrices in the same run by choosing several values: 0.0 0.01 0.05 0.1</p>
+<p>–fpr: A value of 0.01 is the default, and represents a fairly conservative setting, which is appropriate for most analyses. In order to examine a single dataset at a time and remove more noise (at the expense of some signal), choose larger values such as 0.05 or 0.1. Bear in mind that the value 1 represents removal of (nearly) every count in the dataset, signal and noise. You can generate multiple output count matrices in the same run by choosing several values: 0.0 0.01 0.05 0.1.</p>
 </div>
 </div>
 <div id="more-information-1" class="section level2 hasAnchor" number="3.3">
