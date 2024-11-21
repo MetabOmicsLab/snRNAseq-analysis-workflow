@@ -1,5 +1,5 @@
 --- 
-title: "An optimized practice for upstream analysis of single nucleus transcriptomics in key metabolic tissues"
+title: "Optimized analytical workflow for single-nucleus transcriptomics in main metabolic tissues"
 author: "Pengwei Dong"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

@@ -105,7 +105,7 @@ NC_merged
 ## Peform analysis without integration
 We begin by analyzing the dataset without performing integration to assess whether batch-effect correction is necessary. The resulting clusters are defined by both cell type and stimulation condition, which poses challenges for downstream analysis.
 ```{shell}
-DefaultAssay(NC_merged) <- 'SCT'
+DefaultAssay(NC_merged) <- 'RNA'
 
 NC_merged <- SCTransform(NC_merged, verbose = T) 
 
